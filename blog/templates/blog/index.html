@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+</head>
+<body>
+    <h1>Latest Articles</h1>
+    <ul>
+        {% for article in articles %}
+        <li><a href="{% url 'article_detail' article.id %}">{{ article.title }}</a> ({{ article.publication_date }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
